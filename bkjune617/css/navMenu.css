@@ -1,0 +1,39 @@
+/* navMenu CSS */
+
+*
+#styletwo{
+	position:relative;
+	display:block;
+	height:50px;
+	font-size:11px;
+	font-weight:bold;
+	background:transparent url("../main/bgOFF.gif") repeat-x top left;
+	font-family:Arial,Verdana,Helvitica,sans-serif;
+	}
+
+#styletwo ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	width:auto;
+	}
+
+#styletwo ul li{
+	display:block;
+	float:left;
+	margin:0 1px 0 0;
+	}
+
+#styletwo ul li a{
+	display:block;
+	float:left;
+	color:#000;
+	text-decoration:none;
+	padding:6px 10px 0 10px;
+	height:24px;
+	}
+
+#styletwo ul li a:hover,#styletwo ul li a.current{
+	color:#fff;
+	background:transparent url("../main/bgON.gif") repeat-x top left;
+	}
