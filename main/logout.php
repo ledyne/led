@@ -1,8 +1,6 @@
 <?php
 session_start();
-
 //logout.php
-//<meta name="author" content="Daniel Le ver001">
 
 if(!isset($_SESSION['user']))
 {
