@@ -5,8 +5,6 @@
 //php userlog.php to insert user info to userlogtbl
 //<meta name="author" content="Daniel Le ver001">
 
-include_once('../conf/dbinfo.inc.php');
-
 
 if(isset($_SESSION['user'])!="")
 {
@@ -17,9 +15,15 @@ if(isset($_SESSION['user'])!="")
 //Track user logged on to the server
 function trackuser($user)
 {
+	$host = 'localhost';
+	$username = 'psat';
+	$password= 'nonenone';
+	$databaseName = 'psat';
+	$con = mysqli_connect($host,$username,$password,$databaseName) or die("Could not connect???" . mysqli_error($con));
 	$query = "INSERT INTO userlogtbl VALUES ('','$user',now())";
-	mysql_query($query);
+	mysqli_query($con, $query);
 	//echo "New Record Added";
-	mysql_close();
+	mysqli_close($con);
 }
+//trackuser($user);
 ?>
